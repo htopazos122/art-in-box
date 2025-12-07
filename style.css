@@ -253,6 +253,17 @@ h1 {
     margin: 1.5rem 0;
 }
 
+.product-image {
+    max-width: 700px;
+    margin: 3rem auto;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .project-details {
     text-align: left;
     max-width: 600px;
