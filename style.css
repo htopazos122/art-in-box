@@ -1,0 +1,150 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body スタイル */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 25%, #4ECDC4 50%, #95E1D3 75%, #F38181 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: white;
+    padding: 1rem;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container スタイル */
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(255, 107, 107, 0.4),
+                0 0 60px rgba(255, 230, 109, 0.3),
+                0 0 100px rgba(78, 205, 196, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Typography */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    background: linear-gradient(45deg, #FF6B6B, #FFE66D, #4ECDC4, #95E1D3);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowText 3s ease infinite;
+}
+
+@keyframes rainbowText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Info セクション */
+.info {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.info p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Emoji スタイル */
+.emoji {
+    font-size: 3rem;
+    margin-top: 1rem;
+    animation: bounce 2s ease-in-out infinite, rotate 4s linear infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 230, 109, 0.8));
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg) drop-shadow(0 0 20px rgba(255, 230, 109, 0.8));
+    }
+    100% {
+        filter: hue-rotate(360deg) drop-shadow(0 0 20px rgba(255, 230, 109, 0.8));
+    }
+}
+
+/* レスポンシブ対応 */
+
+/* タブレット（768px以下） */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+}
+
+/* スマホ（480px以下） */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .emoji {
+        font-size: 2rem;
+    }
+}
