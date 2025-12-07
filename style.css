@@ -1,3 +1,6 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -5,119 +8,62 @@
     box-sizing: border-box;
 }
 
-/* Body スタイル */
+/* Body スタイル - MasterClass inspired dark theme */
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 25%, #60a5fa 50%, #93c5fd 75%, #dbeafe 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
-    color: #1e293b;
-    padding: 1rem;
+    background: #0a0a0a;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Container スタイル */
+/* Container スタイル - Clean and minimal */
 .container {
     text-align: center;
-    max-width: 700px;
+    max-width: 900px;
     width: 100%;
-    padding: 3rem;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 240, 0.9));
-    backdrop-filter: blur(10px);
-    border-radius: 30px;
-    box-shadow: 0 20px 60px rgba(30, 58, 138, 0.3),
-                0 0 80px rgba(251, 191, 36, 0.2),
-                inset 0 2px 20px rgba(255, 255, 255, 0.5);
-    border: 3px solid rgba(251, 191, 36, 0.4);
+    padding: 4rem 3rem;
+    background: transparent;
     position: relative;
-    overflow: hidden;
 }
 
-.container::before {
-    content: '✨';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 2rem;
-    animation: sparkle 3s ease-in-out infinite;
-}
-
-.container::after {
-    content: '✨';
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 2rem;
-    animation: sparkle 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes sparkle {
-    0%, 100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-}
-
-/* Typography */
+/* Typography - Bold and impactful */
 h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    background: linear-gradient(45deg, #1e3a8a, #3b82f6, #fbbf24, #f59e0b);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: magicText 4s ease infinite;
-    text-shadow: 2px 2px 4px rgba(251, 191, 36, 0.3);
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    line-height: 1;
     text-transform: uppercase;
-}
-
-@keyframes magicText {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .subtitle {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1.5rem;
-    color: #1e3a8a;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-style: italic;
+    margin-bottom: 3rem;
+    color: #a1a1a1;
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
 }
 
-/* Navigation Buttons */
+/* Emoji スタイル - Subtle */
+.emoji {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+    opacity: 0.9;
+}
+
+/* Navigation Buttons - MasterClass style */
 .nav-buttons {
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -126,187 +72,203 @@ h1 {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
-    color: white;
+    padding: 1.125rem 3rem;
+    background: #ffffff;
+    color: #0a0a0a;
     text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
+    border-radius: 0;
+    font-size: 0.95rem;
     font-weight: 600;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4),
-                0 0 20px rgba(251, 191, 36, 0.3);
-    transition: all 0.3s ease;
-    border: 2px solid rgba(251, 191, 36, 0.5);
-    min-width: 250px;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(251, 191, 36, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
-
-.btn:hover::before {
-    width: 300px;
-    height: 300px;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #ffffff;
+    min-width: 280px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.5),
-                0 0 30px rgba(251, 191, 36, 0.5);
+    background: transparent;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
-.btn:active {
-    transform: translateY(-1px) scale(1.02);
-}
-
-/* Emoji スタイル */
-.emoji {
-    font-size: 4rem;
-    margin: 1rem 0;
-    animation: float 3s ease-in-out infinite;
-    filter: drop-shadow(0 5px 15px rgba(251, 191, 36, 0.6));
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(-5deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(5deg);
-    }
+.btn:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
 }
 
 /* Content Styles */
 .content {
-    margin: 2rem 0;
+    margin: 3rem 0;
     text-align: left;
 }
 
 .content p {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     line-height: 1.8;
-    color: #1e3a8a;
-    margin: 1rem 0;
+    color: #d4d4d4;
+    margin: 1.5rem 0;
+    font-weight: 400;
 }
 
-/* Artist Cards */
+/* Artist Cards - Premium feel */
 .artist-card {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(251, 191, 36, 0.1));
-    padding: 1.5rem;
-    border-radius: 15px;
-    margin: 1rem 0;
-    border: 2px solid rgba(59, 130, 246, 0.3);
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 0;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
 }
 
 .artist-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(8px);
+}
+
+.artist-card:focus-within {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
 }
 
 .artist-card h3 {
-    color: #1e3a8a;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .artist-card p {
-    color: #475569;
+    color: #a1a1a1;
     font-size: 1rem;
     margin: 0;
+    line-height: 1.6;
 }
 
-/* Purchase Options */
+/* Purchase Options - Elegant pricing cards */
 .purchase-option {
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(59, 130, 246, 0.15));
-    padding: 2rem;
-    border-radius: 20px;
-    margin: 1.5rem 0;
-    border: 3px solid rgba(251, 191, 36, 0.4);
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem 2rem;
+    border-radius: 0;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
+    backdrop-filter: blur(10px);
 }
 
 .purchase-option:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(251, 191, 36, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+.purchase-option:focus-within {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
 }
 
 .purchase-option h3 {
-    color: #1e3a8a;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .purchase-option .price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #f59e0b;
-    margin: 1rem 0;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 1.5rem 0;
+    letter-spacing: -0.02em;
 }
 
 .purchase-option p:not(.price) {
-    color: #475569;
+    color: #a1a1a1;
     font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* レスポンシブ対応 */
 
 /* タブレット（768px以下） */
 @media (max-width: 768px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .container {
-        padding: 2rem;
+        padding: 3rem 2rem;
     }
 
     .btn {
-        min-width: 200px;
-        font-size: 1rem;
+        min-width: 240px;
+        font-size: 0.9rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .purchase-option {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .purchase-option .price {
+        font-size: 2.5rem;
     }
 }
 
 /* スマホ（480px以下） */
 @media (max-width: 480px) {
+    body {
+        padding: 1rem 0.75rem;
+    }
+
     h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .subtitle {
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
 
     .emoji {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .btn {
         min-width: 100%;
-        font-size: 0.95rem;
-        padding: 0.9rem 2rem;
+        font-size: 0.875rem;
+        padding: 1rem 2rem;
     }
 
     .container {
+        padding: 2rem 1.5rem;
+    }
+
+    .artist-card {
         padding: 1.5rem;
+    }
+
+    .purchase-option {
+        padding: 2rem 1.25rem;
+    }
+
+    .purchase-option .price {
+        font-size: 2rem;
     }
 }
